@@ -1,0 +1,7 @@
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: go-demo
+data:
+  CONFIG_VALUE: "John.doe"
