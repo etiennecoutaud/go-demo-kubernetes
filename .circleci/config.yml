@@ -1,0 +1,18 @@
+version: 2.1
+
+jobs:
+  test-clone:
+    executor: 
+    docker:
+      - image: ubuntu
+    steps:
+    - run:
+        name: Git clone
+        command: git clone git@github.com:etiennecoutaud/kubeusr.git
+
+
+workflows:
+   test:
+      jobs:
+        - test-clone
+
