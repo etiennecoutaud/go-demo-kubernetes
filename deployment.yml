@@ -16,14 +16,10 @@ spec:
       - name: go-demo
         image: nginx
         ports:
-        - containerPort: 8080
+        - containerPort: 80
         env:
         - name: CONFIG_VALUE
           valueFrom:
               configMapKeyRef:
                 name: go-demo
                 key: CONFIG_VALUE
-        livenessProbe:
-          httpGet:
-            path: /healthz
-            port: 8080
